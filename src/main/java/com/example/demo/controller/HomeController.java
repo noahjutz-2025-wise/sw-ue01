@@ -11,4 +11,9 @@ public class HomeController {
     public String hallo() {
         return "Hallo Welt!";
     }
+
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
 }
