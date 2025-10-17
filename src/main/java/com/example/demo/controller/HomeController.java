@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Map;
+
 @Controller
 public class HomeController {
     @GetMapping("/hallo")
@@ -25,7 +27,7 @@ public class HomeController {
 
     @GetMapping("/processform")
     @ResponseBody
-    public String processform(@RequestParam String username, @RequestParam String password, @RequestParam String role) {
-        return "formprocessed: " + username + ", " + password + ", " + role;
+    public String processform(@RequestParam Map<String, String> form) {
+        return "formprocessed: " + form;
     }
 }
