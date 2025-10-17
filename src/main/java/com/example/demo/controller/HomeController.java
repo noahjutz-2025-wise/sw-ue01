@@ -25,7 +25,7 @@ public class HomeController {
 
     @GetMapping("/processform")
     @ResponseBody
-    public String processform(@RequestParam String username, @RequestParam String password) {
-        return "formprocessed: " + username + ", " + password;
+    public String processform(@RequestParam String username, @RequestParam String password, @RequestParam String role) {
+        return "formprocessed: " + username + ", " + password + ", " + role;
     }
 }
